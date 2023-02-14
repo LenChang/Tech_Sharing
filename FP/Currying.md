@@ -17,8 +17,11 @@ const add = (num) => {
 const addNum1 = add(1); // your setting is "add num 1"
 const result = addNum1(3) // data is "3" and your action is "add number 1". So the result is 4
 ```
+## Library
+- https://lodash.com/docs/4.17.15#curry
+- https://ramdajs.com/docs/#curry
 
-## Topic
+## Sub-topics which is related to Currying
 ### Lazy evaluation
 > Delay your **complicated execution** until you really want it
 
