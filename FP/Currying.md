@@ -26,7 +26,8 @@ const result = addNum1(3) // data is "3" and your action is "add number 1". So t
 > Delay your **complicated execution** until you really want it
 
 `a() && b()`
-JavaScript first evaluates a(), if it’s false it will not evaluate b() because its value is not needed. In this case, we can say that b() is lazily evaluated.
+- JavaScript first evaluates a(), if it’s false it will not evaluate b() because its value is not needed. In this case, we can say that b() is lazily evaluated.
+- [More deatils of Lazy_Evaluation](../FP/Lazy_Evaluation.md)
 
 #### Sample Code
 ```
