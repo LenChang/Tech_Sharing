@@ -39,5 +39,8 @@ function parseObject(result) {
 }
 ```
 
+## Better way to improve ?
+- [Memoization](../FP/Memoization.md)
+
 # Reference
 - https://thoughts.travelperk.com/optimizing-js-with-lazy-evaluation-and-memoization-9d0cd8c30cd4
