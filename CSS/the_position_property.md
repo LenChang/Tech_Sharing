@@ -13,6 +13,9 @@
 - It **wouldn't** keep the position:static
   - It **would** affect others cuz position:static is gone.   
 - It will overlay other blocks and belongs to **new layer** which is above on base layer. It also means that the property will only follow the content (**No inheritance**)
+#### z-index
+> bigger number, higher layer
+
 ### fixed
 - TBC
 ### sticky
@@ -21,3 +24,4 @@
 ## Reference
 - https://www.w3schools.com/css/css_positioning.asp
 - https://ithelp.ithome.com.tw/articles/10212202
+- [z-index](https://kumo.tw/article.php?id=44)
