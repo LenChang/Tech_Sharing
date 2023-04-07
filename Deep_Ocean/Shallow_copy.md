@@ -1,10 +1,11 @@
-1. Overview
+# Agenda
+## Overview
 > A shallow copy of an object is a copy whose properties share the same references
 
-2. Example
+## Example
 - TBD.
 
-3. How to either fix or bypass it ?
+## How to either fix or bypass it ?
 - TBD.
 
 # Ref Docs
