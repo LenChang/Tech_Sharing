@@ -105,6 +105,8 @@ class HeroService {}
 })
 class HeroListComponent {}
 ```
+### DI Containers
+- https://brandi.js.org/
 
 # Reference Docs
 - https://dev.to/vovaspace/dependency-injection-in-typescript-4mbf
