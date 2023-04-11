@@ -6,13 +6,62 @@
 
 # Example
 ## dependency inversion
+### Function
 ```
-// it's dependency inversion
 function cc(a:string, b:number, c:()=>number){
 ...
 }
 const tmp = cc('aa',11,Math.random)
 ```
+### Class
+#### Code without dependency inversion
+```
+class FileSystem {
+  writeToFile(data) {
+    // Implementation
+  }
+}
+
+class ExternalDB {
+  writeToDatabase(data) {
+    // Implementation
+  }
+}
+
+class PersistanceManager {
+  saveData(db, data) {
+    if (db instanceof FileSystem) {
+      db.writeToFile(data)
+    }
+
+    if (db instanceof ExternalDB) {
+      db.writeToDatabase(data)
+    }
+  }
+}
+```
+#### Code with dependency inversion
+```
+class FileSystem {
+  save(data) {
+    // Implementation
+  }
+}
+
+class ExternalDB {
+  save(data) {
+    // Implementation
+  }
+}
+
+class PersistanceManager {
+  saveData(db, data) {
+    db.save(data)
+  }
+}
+```
+
+
 ## dependency injection
 ```
 interface Logger {
@@ -60,3 +109,4 @@ class HeroListComponent {}
 # Reference Docs
 - https://dev.to/vovaspace/dependency-injection-in-typescript-4mbf
 - https://angular.io/guide/dependency-injection-overview
+- https://dev.to/denisveleaev/5-solid-principles-with-javascript-how-to-make-your-code-solid-1kl5
