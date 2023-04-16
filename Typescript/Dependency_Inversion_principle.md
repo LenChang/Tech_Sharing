@@ -1,8 +1,9 @@
 # Definition
 - Decouple modules from each other and make it **Reusability** and **Testability**
-- Deliever and pass some modules of an application to the module which requires them of an application (Angular)
 - Depends on abstraction conversion instead of implementation
-- Dependency Injection for Class as same as Dependency Inversion of function
+## dependency Injection
+- Inject instance into class by **constructor**
+- Deliever and pass some modules of an application to the module which requires them of an application (Angular)
 
 # Example
 ## dependency inversion
