@@ -44,6 +44,33 @@ export class AppComponent implements  AfterViewInit {
   .....
 }
 ```
+
+### Template References
+```
+@Component({
+  selector: 'app-root',
+  template: `      
+      <ng-template #defaultTabButtons>
+          <button class="tab-button" (click)="login()">
+            {{loginText}}
+          </button>
+          <button class="tab-button" (click)="signUp()">
+            {{signUpText}}
+          </button>
+      </ng-template>
+`})
+export class AppComponent implements OnInit {
+
+    @ViewChild('defaultTabButtons')
+    private defaultTabButtonsTpl: TemplateRef<any>;
+
+    ngOnInit() {
+        console.log(this.defaultTabButtonsTpl);
+    }
+
+}
+```
+
 ### The DOM element of a component
 > The result would be **Component Instance** instead of **Reference**
 ```
@@ -79,3 +106,4 @@ export class AppComponent implements  AfterViewInit {
 - https://blog.angular-university.io/angular-viewchild/
 - https://www.positronx.io/angular-viewchild-access-child-component/
 - https://www.digitalocean.com/community/tutorials/angular-viewchild-access-component
+- https://stackoverflow.com/questions/41880420/how-to-get-templateref-of-a-component-in-angular2
