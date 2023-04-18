@@ -1,5 +1,5 @@
 # Introduction
-- https://blog.angular-university.io/angular-file-upload/
+- How to upload files and preview it if the file is image
 
 ## Building the User Interface of a File Upload Component
 ### HTML
@@ -36,3 +36,27 @@
 ```
 <input type="file" class="file-upload" multiple>
 ```
+
+## Show Image Preview
+### HTML
+```
+<input type="file" accept="image/*" (change)="showPreview($event)" />
+```
+### TS file
+```
+...
+showPreview(event) {
+    const file = (event.target as HTMLInputElement).files[0];
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      this.imageURL = e.target.result as string;
+    }
+    reader.readAsDataURL(file)
+  }
+...  
+  ````
+
+# Reference
+- https://blog.angular-university.io/angular-file-upload/
+- https://developer.mozilla.org/en-US/docs/Web/API/File_API/Using_files_from_web_applications
+- https://www.positronx.io/angular-show-image-preview-with-reactive-forms-tutorial/
