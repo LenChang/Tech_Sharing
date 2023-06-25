@@ -2,7 +2,7 @@
 - The main difference between them is that sessionStorage only maintains a storage area. At the same time, the browser is open (including when the page reloads or restores) while localStorage continues to store data after the browser is closed.
 
 # localStorage vs. cookies
-- Cookies can only store a maximum of four kilobytes of data, which is significantly less than the five megabytes storage capacity of localStorage.\
+- Cookies can only store a maximum of four kilobytes of data, which is significantly less than the five megabytes storage capacity of localStorage.
 - Cookies are automatically sent to the server with every HTTP request, but localStorage aren't
 - localStorage doesn't expire, but cookies can be set to expire with conditions
 
