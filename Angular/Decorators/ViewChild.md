@@ -131,7 +131,7 @@ export class CountdownViewChildParentComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     // Redefine `seconds()` to get from the `CountdownTimerComponent.seconds` ...
-    // but wait a tick first to avoid one-time devMode
+    // To avoid unidirectional-data-flow-violation error, you need to let the rendering process run again
     setTimeout(() => this.seconds = () => this.timerComponent.seconds, 0);
   }
 
