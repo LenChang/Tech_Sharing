@@ -102,7 +102,43 @@ export class AppComponent implements  AfterViewInit {
 }
 ```
 
-## Reference
+# Trouble shooting
+## Unidirectional-data-flow-violation error
+> The view of Parent & Child initialization are completed before ngAfterViewInit(), you do anything for them isn't workable
+```
+import ...
+
+@Component({
+  ...
+  template: `
+    ...
+    <div class="seconds">{{ seconds() }}</div>
+    <app-countdown-timer></app-countdown-timer>
+  `,
+  ...
+})
+export class CountdownViewChildParentComponent implements AfterViewInit {
+
+  @ViewChild(CountdownTimerComponent)
+  private timerComponent!: CountdownTimerComponent;
+
+  seconds() { return 0; }
+
+  ngAfterViewInit() {
+    // Redefine `seconds()` to get from the `CountdownTimerComponent.seconds` ...
+    // but wait a tick first to avoid one-time devMode
+    setTimeout(() => this.seconds = () => this.timerComponent.seconds, 0);
+  }
+
+  start() { this.timerComponent.start(); }
+  stop() { this.timerComponent.stop(); }
+}
+```
+### Ref Docs
+- https://angular.io/guide/component-interaction#parent-calls-an-viewchild
+- https://blog.angular-university.io/angular-2-what-is-unidirectional-data-flow-development-mode/
+
+# Reference
 - https://blog.angular-university.io/angular-viewchild/
 - https://www.positronx.io/angular-viewchild-access-child-component/
 - https://www.digitalocean.com/community/tutorials/angular-viewchild-access-component
