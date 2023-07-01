@@ -101,6 +101,11 @@ export class AppComponent implements  AfterViewInit {
    ....
 }
 ```
+### Ref Docs
+- https://blog.angular-university.io/angular-viewchild/
+- https://www.positronx.io/angular-viewchild-access-child-component/
+- https://www.digitalocean.com/community/tutorials/angular-viewchild-access-component
+- https://stackoverflow.com/questions/41880420/how-to-get-templateref-of-a-component-in-angular2
 
 # Trouble shooting
 ## Unidirectional-data-flow-violation error
@@ -137,9 +142,3 @@ export class CountdownViewChildParentComponent implements AfterViewInit {
 ### Ref Docs
 - https://angular.io/guide/component-interaction#parent-calls-an-viewchild
 - https://blog.angular-university.io/angular-2-what-is-unidirectional-data-flow-development-mode/
-
-# Reference
-- https://blog.angular-university.io/angular-viewchild/
-- https://www.positronx.io/angular-viewchild-access-child-component/
-- https://www.digitalocean.com/community/tutorials/angular-viewchild-access-component
-- https://stackoverflow.com/questions/41880420/how-to-get-templateref-of-a-component-in-angular2
