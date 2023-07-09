@@ -20,12 +20,12 @@ const promiseDefered = defer(() => {
     resolve();
   });
 });
+promiseDefered.subscribe(console.log);
 ```
+
 #### from vs defer ?
 > defer() is delaying the function execution time; from() just make promise to ovservable only
 
-promiseDefered.subscribe(console.log);
-```
 ### Get different random number
 > Math.random() is eagerly executed
 ```
