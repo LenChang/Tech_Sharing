@@ -21,3 +21,7 @@
       return valueChanged;
     }
 }
+```
+### Reference
+- https://www.ag-grid.com/javascript-data-grid/value-setters/#value-setter
+- https://www.ag-grid.com/angular-data-grid/cell-editing/
