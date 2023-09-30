@@ -1,6 +1,6 @@
 # Overview
 > Renderer2 is a service used to perform DOM operations in a platform-independent manner, instead of directly manipulating the DOM.
-## Example
+# Example
 ```
 @Component({
   selector: 'app-example',
@@ -18,3 +18,5 @@ export class ExampleComponent {
   }
 }
 ```
+# Reference
+- https://medium.com/startit-up/advanced-components-in-angular-41b43556178d
