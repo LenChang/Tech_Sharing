@@ -24,7 +24,7 @@
 ```
 
 ## *ngTemplateOutlet
-> Point ng-template to be a part of ng-container
+> This allows us to pass values to variables inside the *ngTemplate*
 ```
 @Component({
   selector: 'app-root',
@@ -32,10 +32,15 @@
 <ng-template #estimateTemplate let-lessonsCounter="estimate">
     <div> Approximately {{lessonsCounter}} lessons ...</div>
 </ng-template>
+<!-- either this one -->
 <ng-container 
    *ngTemplateOutlet="estimateTemplate;context:ctx">
 </ng-container>
 `})
+<!-- or another one -->
+<ng-container 
+   <ng-container [ngTemplateOutlet]="estimateTemplate" [ngTemplateOutletContext]="ctx"></ng-container>
+</ng-container>
 export class AppComponent {
 
     totalEstimate = 10;
@@ -125,3 +130,4 @@ export class TabContainerComponent {
 
 # Reference
 - https://blog.angular-university.io/angular-ng-template-ng-container-ngtemplateoutlet/
+- https://medium.com/startit-up/advanced-components-in-angular-41b43556178d
