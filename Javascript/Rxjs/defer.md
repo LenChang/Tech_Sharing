@@ -35,11 +35,11 @@ randNum.subscribe(console.log);
 randNum.subscribe(console.log);
 
 const randNum = defer(() => of(Math.random()));
-randNum2.subscribe(console.log);
-randNum2.subscribe(console.log);
+randNum.subscribe(console.log);
+randNum.subscribe(console.log);
 
 // The same concept as using a function
-const randNum = () => of(Math.random());
+const randNum2 = () => of(Math.random());
 randNum2().subscribe(console.log);
 randNum2().subscribe(console.log);
 ```
