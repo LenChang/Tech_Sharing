@@ -79,3 +79,4 @@ export class CustomerService {
 - https://rxjs.dev/api/operators/shareReplay
 - https://fullstackladder.dev/blog/2020/10/15/mastering-rxjs-30-multicast-publish-refcount-share-sharereplay/
 - https://stackoverflow.com/questions/68101744/updating-cached-http-request-in-angular-with-rxjs-and-sharereplay
+- https://www.bitovi.com/blog/always-know-when-to-use-share-vs.-sharereplay
