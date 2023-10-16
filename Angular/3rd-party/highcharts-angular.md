@@ -13,11 +13,12 @@
 ```
 #### Sample Code
 - https://stackblitz.com/edit/highcharts-angular-optimal-way-to-update?file=src%2Fapp%2Fapp.component.html
-
-### Specify a fixed width for column or bar points
-> pointWidth
-#### Docs
-- https://api.highcharts.com/highcharts/plotOptions.columnrange.pointWidth
+### Remove all series data
+- https://stackoverflow.com/questions/6604291/proper-way-to-remove-all-series-data-from-a-highcharts-chart?rq=4
+### Disable the display of series
+- https://www.highcharts.com/forum/viewtopic.php?t=10605
+### Handle the issue "Chart inside ng-bootstrap modal menu is always cut off"
+- https://www.highcharts.com/forum/viewtopic.php?t=44935
 ## BoxPlot
 > https://zhuanlan.zhihu.com/p/347067055
 - More Samples https://api.highcharts.com/highcharts/series.boxplot
@@ -29,6 +30,10 @@
 > https://www.highcharts.com/demo/highcharts/columnrange
 ### Adjust the opacity
 - https://api.highcharts.com/highcharts/plotOptions.columnrange.opacity
+### Specify a fixed width for column or bar points
+> pointWidth
+#### Docs
+- https://api.highcharts.com/highcharts/plotOptions.columnrange.pointWidth
 
 
 # Reference
