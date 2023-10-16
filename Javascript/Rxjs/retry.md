@@ -14,3 +14,4 @@ of('trigger')
 # Reference
 - https://rxjs.dev/api/operators/retry
 - https://stackoverflow.com/questions/72592177/how-can-i-retry-with-a-delay-in-rxjs-without-using-the-deprecated-retrywhen
+- https://blog.angular-university.io/rxjs-error-handling/
