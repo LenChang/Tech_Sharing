@@ -77,3 +77,4 @@ reset() {
 - https://blog.angular-university.io/angular-file-upload/
 - https://developer.mozilla.org/en-US/docs/Web/API/File_API/Using_files_from_web_applications
 - https://www.positronx.io/angular-show-image-preview-with-reactive-forms-tutorial/
+- https://stackoverflow.com/questions/40165271/how-to-reset-selected-file-with-input-tag-file-type-in-angular-2
