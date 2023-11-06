@@ -2,7 +2,7 @@
 - How to upload files and preview it if the file is image
 
 ## Building the User Interface of a File Upload Component
-### HTML
+#### HTML
 ```
 <input type="file" class="file-input"
        (change)="onFileSelected($event)" #fileUpload>
@@ -17,7 +17,7 @@
     </button>
 </div>
 ```
-### CSS
+#### CSS
 ```
 .file-input {
   display: none;
@@ -38,11 +38,11 @@
 ```
 
 ## Show Image Preview
-### HTML
+#### HTML
 ```
 <input type="file" accept="image/*" (change)="showPreview($event)" />
 ```
-### TS file
+#### TS file
 ```
 ...
 showPreview(event) {
@@ -54,7 +54,24 @@ showPreview(event) {
     reader.readAsDataURL(file)
   }
 ...  
-  ````
+```
+## Reset selected file
+> ViewChild
+#### html
+```
+<input #myInput type="file" placeholder="File Name" name="filename" (change)="onChange($event)">
+```
+#### ts
+```
+@ViewChild('myInput')
+myInputVariable: ElementRef;
+...
+reset() {
+    console.log(this.myInputVariable.nativeElement.files);
+    this.myInputVariable.nativeElement.value = "";
+    console.log(this.myInputVariable.nativeElement.files);
+}
+```
 
 # Reference
 - https://blog.angular-university.io/angular-file-upload/
