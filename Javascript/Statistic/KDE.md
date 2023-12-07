@@ -1,4 +1,5 @@
 # Get Started
+> Kernel Density Estimation (KDE)
 - https://www.highcharts.com/blog/tutorials/data-science-and-highcharts-kernel-density-estimation/
 
 # Ref. Doc
