@@ -1,6 +1,7 @@
 # Overview
 > INSERT … ON DUPLICATE KEY UPDATE
 
+# MySQL
 ```
 INSERT INTO BLOGPOSTs
     (
