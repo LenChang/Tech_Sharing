@@ -1,5 +1,6 @@
 # Overview
 > https://www.npmjs.com/package/highcharts-angular
+
 # Case Study
 ## General
 ### Update the chart
@@ -19,6 +20,9 @@
 - https://www.highcharts.com/forum/viewtopic.php?t=10605
 ### Handle the issue "Chart inside ng-bootstrap modal menu is always cut off"
 - https://www.highcharts.com/forum/viewtopic.php?t=44935
+### Make sub categories to y or x axis
+- https://stackoverflow.com/questions/67741332/add-sub-categories-to-y-axis-on-highcharts
+- https://stackoverflow.com/questions/17946827/highcharts-multilevel-categories
 ## BoxPlot
 > https://zhuanlan.zhihu.com/p/347067055
 - More Samples https://api.highcharts.com/highcharts/series.boxplot
