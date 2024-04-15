@@ -4,7 +4,7 @@
 @Component({...})
 export class AppComponent implements OnInit, OnDestroy {
     
-    subscription: Subscription
+    subscription: new Subscription();
     ngOnInit () {
         var observable1$ = Rx.Observable.interval(1000);
         var observable2$ = Rx.Observable.interval(400);
