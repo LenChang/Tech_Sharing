@@ -1,5 +1,9 @@
 # Overview
-> https://ag-grid.com/angular-data-grid/getting-started/
+> [Quick Start](https://ag-grid.com/angular-data-grid/)
+- [Custom Components](https://ag-grid.com/angular-data-grid/components/)
+  - Registering Custom Components
+  - Providing Additional Parameters
+  - Child to Parent Communication :star:
 
 # General Case
 ## READ
@@ -27,14 +31,19 @@ getAllRows() {
 this.gridOptions.rowData.push(row)
 this.gridApi.setRowData(this.gridOptions.rowData)
 ```
+- Reference
+  - https://stackoverflow.com/questions/38505806/add-remove-rows-in-ag-grid
+
 ### Remove rows(s)
 ```
 // remove
 this.gridOptions.rowData.splice(selectedRow.rowIndex, 1)
 this.gridApi.setRowData(this.gridOptions.rowData)
 ```
-### Reference
-- https://stackoverflow.com/questions/38505806/add-remove-rows-in-ag-grid
+- Reference
+  - https://stackoverflow.com/questions/38505806/add-remove-rows-in-ag-grid
+
+# Validation
 ## How to make cell edit allow only numbers ?
 - https://stackoverflow.com/questions/63820281/ag-grid-cell-edit-allow-only-numbers
 ```
@@ -58,6 +67,6 @@ this.gridApi.setRowData(this.gridOptions.rowData)
     }
 }
 ```
-### Reference
-- https://www.ag-grid.com/javascript-data-grid/value-setters/#value-setter
-- https://www.ag-grid.com/angular-data-grid/cell-editing/
+- Reference
+  - https://www.ag-grid.com/javascript-data-grid/value-setters/#value-setter
+  - https://www.ag-grid.com/angular-data-grid/cell-editing/
