@@ -43,8 +43,11 @@ this.gridApi.setRowData(this.gridOptions.rowData)
 - Reference
   - https://stackoverflow.com/questions/38505806/add-remove-rows-in-ag-grid
 
-# Validation
-## How to make cell edit allow only numbers ?
+# Troubleshooting
+## Cell Comp: Prevent cell comp. affect parent's selection
+> e.g. Do something on cell comp. would affect parent's selection
+- https://www.w3schools.com/jsref/event_stoppropagation.asp
+## Validator: How to make cell edit allow only numbers ?
 - https://stackoverflow.com/questions/63820281/ag-grid-cell-edit-allow-only-numbers
 ```
 // The key point is "valueSetter"
