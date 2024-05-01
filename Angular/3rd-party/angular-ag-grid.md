@@ -43,6 +43,11 @@ this.gridApi.setRowData(this.gridOptions.rowData)
 - Reference
   - https://stackoverflow.com/questions/38505806/add-remove-rows-in-ag-grid
 
+# Cell Components
+> [Official Doc](https://www.ag-grid.com/angular-data-grid/component-cell-renderer/)
+## Examples
+- [Sample Code](https://www.ag-grid.com/angular-data-grid/component-cell-renderer/)
+
 # Troubleshooting
 ## Cell Comp: Prevent cell comp. affect parent's selection
 > e.g. Do something on cell comp. would affect parent's selection
