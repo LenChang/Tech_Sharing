@@ -1,3 +1,16 @@
+# Formatting
+> https://blog.ag-grid.com/formatting-numbers-strings-currency-in-ag-grid/#passing-parameters
+- The column definitions for these are as follows:
+```
+    {
+      field: 'number',
+    },
+    {
+      headerName: 'Number Formatted',
+      field: 'number',
+      valueFormatter: params => params.data.number.toFixed(2),
+    },
+```
 # Cell Comp: Prevent cell comp. affect parent's selection
 > e.g. Do something on cell comp. would affect parent's selection
 - https://www.w3schools.com/jsref/event_stoppropagation.asp
