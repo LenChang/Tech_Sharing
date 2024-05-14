@@ -78,3 +78,4 @@ this.gridApi.setRowData(this.gridOptions.rowData)
 - Reference
   - https://www.ag-grid.com/javascript-data-grid/value-setters/#value-setter
   - https://www.ag-grid.com/angular-data-grid/cell-editing/
+  - https://stackoverflow.com/questions/52710350/ag-grid-better-way-for-validation-row-valuesetter
