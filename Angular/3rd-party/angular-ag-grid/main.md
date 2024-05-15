@@ -6,6 +6,8 @@
   - Child to Parent Communication :star:
 
 # General Case
+## Data Change
+- [Data Change](data-change.md)
 ## READ
 ### Get all rows and selected rows
 > https://stackoverflow.com/questions/50697232/how-can-i-get-all-the-rows-of-ag-grid
@@ -49,4 +51,4 @@ this.gridApi.setRowData(this.gridOptions.rowData)
 - [Sample Code](https://www.ag-grid.com/angular-data-grid/component-cell-renderer/)
 
 # Troubleshooting
-- [sub page](troubleshooting.md)
+- [Troubleshooting](troubleshooting.md)
