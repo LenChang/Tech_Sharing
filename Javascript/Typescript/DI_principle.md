@@ -1,4 +1,5 @@
-# Definition
+# Dependency Injection & Dependency Inversion
+## Definition
 - Decouple modules from each other and make it **Reusability** and **Testability**
 - Depends on abstraction conversion instead of implementation
 ## dependency Injection
