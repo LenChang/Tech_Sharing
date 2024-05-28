@@ -1,4 +1,4 @@
-# Dependency Injection & Dependency Inversion
+# Dependency Injection
 ## Definition
 - Decouple modules from each other and make it **Reusability** and **Testability**
 - Depends on abstraction conversion instead of implementation
@@ -7,7 +7,7 @@
 - Deliever and pass some modules of an application to the module which requires them of an application (Angular)
 
 # Example
-## dependency inversion
+## Dependencies
 ### Function
 ```
 function cc(a:string, b:number, c:()=>number){
@@ -15,56 +15,7 @@ function cc(a:string, b:number, c:()=>number){
 }
 const tmp = cc('aa',11,Math.random)
 ```
-### Class
-#### Code without dependency inversion
-```
-class FileSystem {
-  writeToFile(data) {
-    // Implementation
-  }
-}
-
-class ExternalDB {
-  writeToDatabase(data) {
-    // Implementation
-  }
-}
-
-class PersistanceManager {
-  saveData(db, data) {
-    if (db instanceof FileSystem) {
-      db.writeToFile(data)
-    }
-
-    if (db instanceof ExternalDB) {
-      db.writeToDatabase(data)
-    }
-  }
-}
-```
-#### Code with dependency inversion
-```
-class FileSystem {
-  save(data) {
-    // Implementation
-  }
-}
-
-class ExternalDB {
-  save(data) {
-    // Implementation
-  }
-}
-
-class PersistanceManager {
-  saveData(db, data) {
-    db.save(data)
-  }
-}
-```
-
-
-## dependency injection
+### Class (dependency injection)
 ```
 interface Logger {
   log(message: string): void;
@@ -113,4 +64,3 @@ class HeroListComponent {}
 # Reference Docs
 - https://dev.to/vovaspace/dependency-injection-in-typescript-4mbf
 - https://angular.io/guide/dependency-injection-overview
-- https://dev.to/denisveleaev/5-solid-principles-with-javascript-how-to-make-your-code-solid-1kl5
