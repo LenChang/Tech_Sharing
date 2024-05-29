@@ -20,3 +20,5 @@ class B extends A {
     multiply() {return this.x * this.y;}
 }
 ```
+## Reference
+- https://stackoverflow.com/questions/36843357/typescript-difference-between-private-and-protected-variables
