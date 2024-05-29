@@ -18,7 +18,7 @@ export class AppElemComponent {
 ```
 ### Answer
 - It's a personal style preference
-- Initializing property inline is more concise
+- **Initializing property** inline is more concise
 - TypeScript compiler will bring property which is initialized inline into constructor
   - https://www.typescriptlang.org/play/
 
