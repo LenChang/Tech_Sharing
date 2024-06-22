@@ -1,4 +1,21 @@
-# Ways
+# Way by Angular 16
+## takeUntilDestroyed
+> Note: The function must be implemented under the constructor scope
+```
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+ 
+export class Component implements OnInit{
+  data;
+ 
+  constructor(private service: DataService) {
+    this.service.getData()
+      .pipe(takeUntilDestroyed())
+      .subscribe(response => this.data = response)
+  }
+}
+```
+
+# Ways (Old)
 ## unsubscribe()
 ```
 @Component({...})
@@ -107,3 +124,4 @@ export class AppComponent implements OnInit {
 ```
 # Reference
 - https://blog.bitsrc.io/6-ways-to-unsubscribe-from-observables-in-angular-ab912819a78f
+- https://medium.com/@chandrashekharsingh25/exploring-the-takeuntildestroyed-operator-in-angular-d7244c24a43e
