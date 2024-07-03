@@ -1,10 +1,10 @@
 # Overview
-| List               | Tuple                    | Dictionary  |
-| --- |---|---|
-| [...]              | (...)                    | {...} |
-| Lists are mutable. | Tuple are **immutable**  | Dictionary are mutable |
-| Lists are ordered. | Tuple are **unordered**  | Dictionary are ordered |
-| array of js        | array of js              | object of js |
+| List               | Tuple                    | Set      | Dictionary  |
+| --- |---|---|---|
+| [...]              | (...)                    | {...}    | {[key]: value} |
+| Lists are mutable. | Tuple are **immutable**  | Set **won't** allow duplicate elements  | Dictionary are mutable |
+| Lists are ordered. | Tuple are **ordered**  | Set are **unordered**                   | Dictionary are ordered |
+| array of js        | array of js              | [... new Set([...])] of js              | object of js |
 
 # Tips
 ### Dict to List
