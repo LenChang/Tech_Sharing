@@ -3,8 +3,16 @@
 | --- |---|---|---|
 | [...]              | (...)                    | {...}    | {[key]: value} |
 | Lists are mutable. | Tuple are **immutable**  | Set **won't** allow duplicate elements  | Dictionary are mutable |
-| Lists are ordered. | Tuple are **ordered**  | Set are **unordered**                   | Dictionary are ordered |
+| Lists are ordered. | Tuple are ordered  | Set are **unordered**                   | Dictionary are unordered |
 | array of js        | array of js              | [... new Set([...])] of js              | object of js |
+
+# Dictionary
+| Python | JS |
+| --- | ---|
+| obj_dic.**get**("key1") | obj_dic["key1"] or obj_dic.key1
+| **len**(obj_dic) | Object.keys(obj_dic).length
+| obj_dic.**pop**("key1") | delete obj_dic.key1
+| **del** obj_dic | obj_dic = undefined
 
 # Tips
 ### Dict to List
