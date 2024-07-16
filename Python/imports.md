@@ -3,6 +3,7 @@
 | JS | PY |
 |---|--- |
 | ```import * as "name" from "module_name"``` | ```import "module_name" as "name" ```
+| ```import * from "module_name"``` | ```from "module_name" import *```
 | ```import {"sub_module"} from "module_name"``` | ```from "module_name" import "sub_module"```
 
 # Standard Library
