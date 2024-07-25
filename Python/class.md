@@ -1,5 +1,6 @@
 # The comparison between PY and JS
 > PY: self vs JS: this
+- The **self** should be injected into each method manually; instead **this** is injected into each method automatically
 
 | PY | JS 
 |---|---
