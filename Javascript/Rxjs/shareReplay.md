@@ -1,8 +1,5 @@
 # Overview
 > Share source and replay specified number of emissions on subscription
-- share(): publish() + refCount()
-  - publish(): multicast(() => new Subject())
-- **shareReplay()**: multicast(() => new ReplaySubject()) + refCount()
 ## Term Definition
 ### bufferSize
 > BufferSize means the number of items cached and replayed
@@ -12,10 +9,12 @@ const shared$ = interval(2000).pipe(
   shareReplay(3) // the number "3" is buffer size
 );
 ```
+### refCount
+> the default value is false, it means that the shareReplay will not unsubscribe the source even the observables count drops to is zero  
 ```
 const shared$ = log('shared', obs$.pipe(
-  shareReplay({ bufferSize: 1, refCount: true }), // the number "1" is buffer size
-  take(2)
+  take(2),
+  shareReplay({ bufferSize: 1, refCount: true }) // The source (obs$.pipe(...)) will be unsubscribed from once observables count drops to zero
 ));
 ```
 
