@@ -1,5 +1,33 @@
 # Overview
 > Share source and replay specified number of emissions on subscription
+## The position of the related share operators
+> Important: let sharereplay() at the **end** of your pipe
+### WARNING: share() isn't at the end
+> In this case, we subscribe to tap twice - and those two tap operators subscribe to share twice.
+```
+const interval$ = interval(1000).pipe(
+  share(),
+  tap(() => console.log("Interval Triggered"),
+);
+
+interval$.subscribe();
+interval$.subscribe();
+```
+- we will get two console messages per second
+### WARNING: put shareReplay() before the take()
+> According to the explanation above, the shareReplay() won't unsubscribe the source even though the take() has triggered the completion.
+```
+const shared$ = log('shared', obs$.pipe(
+  shareReplay(1),
+  take(2)
+));
+ 
+shared$.subscribe(x => console.log('sub A: ', x));
+shared$.subscribe(y => console.log('sub B: ', y));
+```
+- shared$ subscribes the new producer includes **"shareReplay + take(2)"** instead of shareReplay()
+
+
 ## Term Definition
 ### bufferSize
 > BufferSize means the number of items cached and replayed
@@ -18,8 +46,8 @@ const shared$ = log('shared', obs$.pipe(
 ));
 ```
 
-## Example
-### How does shareReplay() work ?
+# Example
+## How does shareReplay() work ?
 ```
 const source$ = interval(1000).pipe(
   shareReplay(2)
@@ -47,7 +75,7 @@ setTimeout(() => {
 // shareReplay Demo - The first subscribing: 6
 // shareReplay Demo - The second subscribing: 6
 ```
-### Https request on Angular Service
+## Https request on Angular Service
 ```
 import { shareReplay } from 'rxjs/operators';
 import { Observable } from 'rxjs';
@@ -73,9 +101,7 @@ export class CustomerService {
     }
 }
 ```
-
 # Reference
 - https://rxjs.dev/api/operators/shareReplay
-- https://fullstackladder.dev/blog/2020/10/15/mastering-rxjs-30-multicast-publish-refcount-share-sharereplay/
-- https://stackoverflow.com/questions/68101744/updating-cached-http-request-in-angular-with-rxjs-and-sharereplay
-- https://www.bitovi.com/blog/always-know-when-to-use-share-vs.-sharereplay
+- https://blog.angular-university.io/rxjs-error-handling/
+- https://stackoverflow.com/questions/63232747/should-i-use-sharereplay-as-the-last-operator
