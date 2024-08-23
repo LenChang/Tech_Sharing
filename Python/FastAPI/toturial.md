@@ -7,3 +7,7 @@
 # Sample Code
 > Doc: https://www.udemy.com/course/fastapi-the-complete-course/learn/lecture/29031592#content
 - git clone https://github.com/codingwithroby/fastapi-the-complete-course.git
+
+# Reference
+## Status Codes
+- https://www.udemy.com/course/fastapi-the-complete-course/learn/lecture/36994202#content
