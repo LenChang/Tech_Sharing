@@ -1,0 +1,4 @@
+> @angular/core/testing
+
+# waitForAsync() vs fakeAsync()
+> https://www.udemy.com/course/angular-testing-course/learn/lecture/14945448#content
