@@ -10,3 +10,4 @@ it("creates a spy object with properties", function() {
 
 # Reference
 - https://jasmine.github.io/tutorials/spying_on_properties
+- https://luardo.medium.com/testing-with-mocks-spies-using-createspyobj-in-angular-1e31bf7f6147
