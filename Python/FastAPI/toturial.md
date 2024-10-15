@@ -1,13 +1,20 @@
 # Development Setting
-- https://code.visualstudio.com/docs/python/environments
+> [VS Code Toturial](https://code.visualstudio.com/docs/python/environments)
 ## Venv
 > The activated process by Windows and Mac
-- https://www.udemy.com/course/fastapi-the-complete-course/learn/lecture/29025446#content
+- [Video](https://www.udemy.com/course/fastapi-the-complete-course/learn/lecture/29025446#content)
 
 # Sample Code
-> Doc: https://www.udemy.com/course/fastapi-the-complete-course/learn/lecture/29031592#content
-- git clone https://github.com/codingwithroby/fastapi-the-complete-course.git
+- [Source code](https://github.com/codingwithroby/fastapi-the-complete-course.git)
+- [Video](https://www.udemy.com/course/fastapi-the-complete-course/learn/lecture/29031592#content)
 
 # Reference
 ## Status Codes
-- https://www.udemy.com/course/fastapi-the-complete-course/learn/lecture/36994202#content
+- [Video](https://www.udemy.com/course/fastapi-the-complete-course/learn/lecture/36994202#content)
+## Root Package
+### Example
+```python
+from ..models import Todos
+from ..database import SessionLocal
+```
+- [Video](https://www.udemy.com/course/fastapi-the-complete-course/learn/lecture/40647646#content)
