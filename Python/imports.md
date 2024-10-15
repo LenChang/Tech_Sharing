@@ -16,6 +16,7 @@
 
 ## `__init__.py`
 > It used to be a required part of a package (old, pre-3.3 "regular package", **not newer 3.3+** "namespace package")
+> Files named `__init__.py` are used to mark directories on disk as Python package directories
 - [doc](https://stackoverflow.com/questions/448271/what-is-init-py-for)
 
 # Reference
