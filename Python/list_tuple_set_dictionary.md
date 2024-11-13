@@ -5,6 +5,7 @@
 | Lists are mutable. | Tuple are **immutable**  | Set **won't** allow duplicate elements  | Dictionary are mutable |
 | Lists are ordered. | Tuple are ordered  | Set are **unordered**                   | Dictionary are unordered |
 | array of js        | array of js              | [... new Set([...])] of js              | object of js |
+|[iterable](https://docs.python.org/3/glossary.html#term-iterable)| [iterator/generators](https://docs.python.org/3/glossary.html#term-iterator)
 
 # Dictionary
 | Python | JS |
