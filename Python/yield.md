@@ -1,6 +1,17 @@
 > yield is a kind of **return** and it will convert the function as a generator
-# Example
-## trigger the generator manually
+# Iterables, Iterators and Generators
+> Generators = Iterators are part of Iterables
+## Iterables
+- Everthing you can use ```for...in...``` on is an iterable
+### Example
+- ```mylist = [x*x for x in range(3)]```
+## Generators
+- A kind of iterable that you can only iterate over once.
+### Example
+- ```mylist = (x*x for x in range(3))```
+
+# Case Study
+## Trigger the generator manually
 ```python
 def foo():
   print("starting...")
@@ -12,7 +23,7 @@ print(next(g))
 print("*"*20)
 print(g.send(7))
 ```
-## trigger the generator by for...in
+## Trigger the generator by for...in
 ```python
 def nextSquare():
     i = 1
