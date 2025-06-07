@@ -3,6 +3,7 @@
 ## Definition
 | Hot | Cold |
 | -------- | ------- |
+| e.g. live radio | e.g. video on demand |
 | The data source is created *outside* the observable |The data source is created *inside* the observable|
 | Multicast | Unicast |
 | Emit values *always*, even if there are no subscribers | Emit values only *when we subscribe to them* |
