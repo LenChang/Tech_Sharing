@@ -1,4 +1,32 @@
-# Overview
+# share
+> Returns a new Observable that multicasts (shares) the original Observable
+- https://rxjs.dev/api/operators/share
+```javascript
+import { interval } from 'rxjs';
+import { take, share,finalize } from 'rxjs/operators';
+
+const source$ = interval(1000).pipe(
+  take(5),
+  finalize(() => console.log('Source complete')), // Execute when the observable completes
+  share({ resetOnRefCountZero: true }),
+);
+
+const sub1 = source$.subscribe(val => console.log('Sub1:', val));
+let sub2
+
+setTimeout(() => {
+  sub1.unsubscribe();
+  console.log('Unsubscribe sub1')
+  sub2 = source$.subscribe(val => console.log('Sub2:', val));
+}, 4000);
+
+setTimeout(() => {
+  sub2.unsubscribe();
+  console.log('Unsubscribe sub2')
+}, 30000);
+```
+
+# shareReplay
 > Share source and replay specified number of emissions on subscription
 ## The position of the related share operators
 > Important: let sharereplay() at the **end** of your pipe
