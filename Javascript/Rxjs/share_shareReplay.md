@@ -1,13 +1,31 @@
 # share
 > Returns a new Observable that multicasts (shares) the original Observable
 - https://rxjs.dev/api/operators/share
+#### WARNING: share() isn't at the end
+> In this case, we subscribe to tap twice - and those two tap operators subscribe to share twice.
+```javascript
+import { interval } from 'rxjs';
+import { share, tap } from 'rxjs/operators';
+
+const interval$ = interval(1000).pipe(
+  share(),
+  tap(() => console.log("Interval Triggered")),
+)
+
+interval$.subscribe();
+interval$.subscribe();
+// we will get two console messages per second
+```
+#### Example
 ```javascript
 import { interval } from 'rxjs';
 import { take, share,finalize } from 'rxjs/operators';
 
+const start = Date.now()
+
 const source$ = interval(1000).pipe(
   take(5),
-  finalize(() => console.log('Source complete')), // Execute when the observable completes
+  finalize(() => console.log(`Source complete. ${Date.now() - start} ms`)), // Execute when the observable completes
   share({ resetOnRefCountZero: true }),
 );
 
@@ -16,45 +34,34 @@ let sub2
 
 setTimeout(() => {
   sub1.unsubscribe();
-  console.log('Unsubscribe sub1')
+  console.log(`Unsubscribe sub1 ${Date.now() - start} m`)
   sub2 = source$.subscribe(val => console.log('Sub2:', val));
 }, 4000);
 
 setTimeout(() => {
   sub2.unsubscribe();
-  console.log('Unsubscribe sub2')
-}, 30000);
+  console.log(`Unsubscribe sub2 ${Date.now() - start} ms`)
+}, 10000);
 ```
 
 # shareReplay
 > Share source and replay specified number of emissions on subscription
-## The position of the related share operators
-> Important: let sharereplay() at the **end** of your pipe
-### WARNING: share() isn't at the end
-> In this case, we subscribe to tap twice - and those two tap operators subscribe to share twice.
-```
-const interval$ = interval(1000).pipe(
-  share(),
-  tap(() => console.log("Interval Triggered"),
-);
-
-interval$.subscribe();
-interval$.subscribe();
-```
-- we will get two console messages per second
-### WARNING: put shareReplay() before the take()
+#### WARNING: put shareReplay() before the take()
 > According to the explanation above, the shareReplay() won't unsubscribe the source even though the take() has triggered the completion.
-```
-const shared$ = log('shared', obs$.pipe(
+```javascript
+import { interval } from 'rxjs';
+import { shareReplay,take,finalize} from 'rxjs/operators';
+
+const shared$ = interval(1000).pipe(
+  finalize(() => console.log(`Source complete`)),
   shareReplay(1),
-  take(2)
-));
+  take(2),
+)
  
 shared$.subscribe(x => console.log('sub A: ', x));
 shared$.subscribe(y => console.log('sub B: ', y));
+// shared$ wouldn't complete <= memory leak
 ```
-- shared$ subscribes the new producer includes **"shareReplay + take(2)"** instead of shareReplay()
-
 
 ## Term Definition
 ### bufferSize
