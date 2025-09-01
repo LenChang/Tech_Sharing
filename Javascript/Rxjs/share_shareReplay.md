@@ -66,7 +66,7 @@ shared$.subscribe(y => console.log('sub B: ', y));
 ## Term Definition
 ### bufferSize
 > BufferSize means the number of items cached and replayed
-```
+```javascript
 const shared$ = interval(2000).pipe(
   take(6),
   shareReplay(3) // the number "3" is buffer size
@@ -74,7 +74,7 @@ const shared$ = interval(2000).pipe(
 ```
 ### refCount
 > the default value is false, it means that the shareReplay will not unsubscribe the source even the observables count drops to is zero  
-```
+```javascript
 const shared$ = log('shared', obs$.pipe(
   take(2),
   shareReplay({ bufferSize: 1, refCount: true }) // The source (obs$.pipe(...)) will be unsubscribed from once observables count drops to zero
@@ -83,7 +83,7 @@ const shared$ = log('shared', obs$.pipe(
 
 # Example
 ## How does shareReplay() work ?
-```
+```javascript
 const source$ = interval(1000).pipe(
   shareReplay(2)
 );
@@ -111,7 +111,7 @@ setTimeout(() => {
 // shareReplay Demo - The second subscribing: 6
 ```
 ## Https request on Angular Service
-```
+```javascript
 import { shareReplay } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
